@@ -1,2 +1,2 @@
 # Cybercom
-Dai;y Work
+Daily Work
