@@ -1,3 +1,43 @@
+.box{
+    width: 1675px;
+}
 .container{
-    background-color: aqua;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container ul li{
+    list-style: none;
+    float:left;
+    width: 215px;
+    height: 315px;
+    background: black;
+    margin: 40px 88.7px 40px 88.7px;
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+
+.title{
+    height: 90%;
+}
+
+.title1{
+    background-color: white;
+    color: gray;
+    text-align: center;
+}
+
+.text{
+    color: gray;
+    text-align: center;
+    font-size: 29px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
