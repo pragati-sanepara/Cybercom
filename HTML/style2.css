@@ -1,3 +1,57 @@
-.dsncdshf{
-    
+:root{
+    --maxw: 1000px;
+}
+.box{
+    padding: 23px 12px;
+    margin: 23px 12px;
+    /*width:215px;
+    height: 315px;
+    margin: 30px 45px;*/
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px 5px rgb(177, 175, 175);
+}
+.container1{ 
+    max-width: 333px;
+    margin: auto;
+    text-align: center;
+}
+.one{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.two{
+    color: gray;
+    text-align: center;
+
+}
+.container{ 
+    max-width: var(--maxw);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container .box .one{
+    font-size: 17px;
+}
+.girl{
+    width: 215px;
+    clip-path: circle();
+    margin-top: 10px;
+}
+
+.aa{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: gray;
+}
+.container .box hr{
+    margin-left: 30px;
+    margin-right: 30px;
 }
