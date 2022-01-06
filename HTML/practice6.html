@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style6.css">
 </head>
 <body>
-    eeeeeeeeeee
+    <div class="onimg">
+        <img src="D:\traing instalation\htdocs\CyberCom\Cybecom\Cybercom\sx\html\practical2\3.JPG" alt="2020" width="790px" height="110px">
+        <div class="centered">CONTACT US</div>
+    </div>
+    <form style="max-width:500px;margin:auto">
+    
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Username" name="usrnm">
+        </div>
+      
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+        
+        <div class="input-container">
+          <i class="fa fa-phone icon"></i>
+          <input class="input-field" type="tel" placeholder="Eg. +1 800 000000" name="phone">
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-comment icon"></i>
+            <textarea class="input-field" rows="4" cols="29" name="comment">Your comment</textarea>
+        </div>
+
+        <button type="submit" class="btn" onclick="myFunction()">send now</button>
+      </form>
+      <script>
+        function myFunction() {
+          alert("Your request has bin submited !");
+        }
+        </script>
 </body>
 </html>
