@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+>>>>>>> origin/develop
 .one{
     margin: 4px;
 }
@@ -7,5 +17,8 @@ td{
 .two{
     padding: 5px;
 }
+<<<<<<< HEAD
 .box{
 }
+=======
+>>>>>>> origin/develop
