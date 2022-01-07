@@ -1,0 +1,93 @@
+<html>
+
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Your Address</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="add">Street:</label>
+            <input type="text" id="add" name="add"><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city"><br><br>
+
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Your Address</legend>
+            <label for="fname">Biographi:</label>
+            <textarea rows="4" cols="29" name="comment"></textarea><br><br>
+            <label for="myfile">Image:</label>
+            <input type="file" id="myfile" name="myfile" multiple><br><br>
+            <label>age group: </label>
+            <select>
+                <option value="group1"> 0 to 9 year
+                </option>
+                <option value="group2"> 9 to 18 year
+                </option>
+                <option value="group3"> 18 to 40 year
+                </option>
+                <option value="group4"> 40 to 60 year
+                </option>
+                <option value="group5"> above 60 year
+                </option>
+            </select>
+
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <label> Favourite Car? </label>
+            <select multiple>
+                <option value="BMW"> BMW
+                </option>
+                <option value="Mercedes"> Mercedes
+                </option>
+                <option value="Audi"> Audi
+                </option>
+                <option value="Skoda"> Skoda
+                </option>
+            </select><br><br>
+            <label> Favourite Car? </label>
+            <select>
+                <option value="BMW"> BMW
+                </option>
+                <option value="Mercedes"> Mercedes
+                </option>
+                <option value="Audi"> Audi
+                </option>
+                <option value="Skoda"> Skoda
+                </option>
+            </select><br><br>
+            <label> Favourite Public Transport? </label>
+            <select id=material name=material class='form-control' multiple>
+                <optgroup label="Books">
+                    <option value=b1>Book 1</option>
+                    <option value=b2>Book 2</option>
+                    <option value=b3>Book 3</option>
+                </optgroup>
+                <optgroup label="Publications">
+                    <option value=pb1>Publications 1</option>
+                    <option value=pb2>Publications 2</option>
+                    <option value=pb3>Publications 3</option>
+                </optgroup>
+                <optgroup label="Articles">
+                    <option value=a1>Articles 1</option>
+                    <option value=a2>Articles 2</option>
+                    <option value=a3>Articles 3</option>
+                </optgroup>
+
+            </select>
+        </fieldset>
+
+    </form>
+    <button onclick="window.location.href='Success.html'">submit</button>
+
+    <input type="reset" value="reset">
+</body>
+
+</html>
