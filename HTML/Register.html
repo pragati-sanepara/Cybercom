@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Register</h1>
+
+  <form action="main.html" method="post" name="personForm" onsubmit="return validationForm()">
+    <div class="container">
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email"><br><br>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw"><br><br>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"><br><br>
+      <input type="submit" value="register">
+    </div>
+  </form>
+  <script type="text/javascript">
+    function validationForm() {
+      var emailID = document.forms["personForm"]["email"];
+      var Password = document.forms["personForm"]["psw"];
+      var rePassword = document.forms["personForm"]["psw-repeat"];
+
+      if (emailID.value == "") {
+        alert("Please enter email id ....!");
+        return false;
+      }
+      if (Password.value == "") {
+        alert("Please enter Password....!");
+        return false;
+      }
+      if (rePassword.value == "") {
+        alert("Please enter rePassword....!");
+        return false;
+      }
+      if ((rePassword.value != "") && (Password.value != rePassword.value)) {
+        alert("Please enter same Repeat Password....!");
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
