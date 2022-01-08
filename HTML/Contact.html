@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="onimg">
+    <img src="D:\traing instalation\htdocs\CyberCom\Cybecom\Cybercom\sx\html\practical2\3.JPG" alt="2020" width="790px"
+      height="110px">
+    <div class="centered">CONTACT US</div>
+  </div>
+  <form style="max-width:500px;margin:auto" action="main.html" name="Pform" onsubmit="return validationForm()">
+
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-phone icon"></i>
+      <input class="input-field" type="tel" placeholder="Eg. +1 800 000000" name="phone">
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-comment icon"></i>
+      <textarea class="input-field" rows="4" cols="29" name="comment" placeholder="Your Comment"></textarea>
+    </div>
+
+    <button type="submit" class="btn"">send now</button>
+  </form>
+      
+  <script>
+    function validationForm() {
+      var userName = document.forms[" Pform"]["usrnm"]; 
+      var emailId = document.forms["Pform"]["email"]; 
+      var phoneNo = document.forms["Pform"]["phone"]; 
+      var Comment = document.forms["Pform"]["comment"]; 
+      
+      if (userName.value == "") {
+         alert("plz enter name..."); 
+         return false; 
+        } 
+      if (emailId.value == "") {
+         alert("plz enter emailId..."); 
+         return false;
+        } 
+      if (phoneNo.value == "") {
+        alert("plz enter phoneNo..."); 
+        return false; 
+      }
+      if (Comment.value == "") {
+        alert("plz enter Comment..."); 
+        return false;
+      }
+    } 
+    </script>
+
+
+</body>
+
+</html>
