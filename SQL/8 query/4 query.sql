@@ -19,6 +19,12 @@ on p1.email = p2.email
 WHERE
 	p1.id > p2.id;
 
+delete  from person1 
+where id in 
+(select * from
+(select max(id) from person1
+group by email having count(*) > 1) as p1);
+    
     
 set sql_safe_updates = 0;
 delete  from person1 
@@ -26,3 +32,6 @@ WHERE id NOT IN
 (select * from
 (select min(id) from person1
     group by email) as p);
+    
+    
+    
