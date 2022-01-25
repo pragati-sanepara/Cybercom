@@ -25,6 +25,10 @@ where id in
 (select max(id) from person1
 group by email having count(*) > 1) as p1);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/develop
 =======
     
 >>>>>>> origin/develop
@@ -36,6 +40,12 @@ WHERE id NOT IN
 (select min(id) from person1
     group by email) as p);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+    
+    
+>>>>>>> origin/develop
 =======
     
     
