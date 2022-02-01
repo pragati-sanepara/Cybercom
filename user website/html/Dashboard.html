@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="ragistration.js"></script>
+    <script type="text/javascript">
+        function getSession()
+        {
+            document.getElementById('userData').innerHTML=sessionStorage.getItem('user');
+        }
+    </script>
+   
+</head>
+<body onload="getSession()">
+    <h3> hello </h3>
+    <h3 id='userData'> </h3>
+    <a href="Dashboard.html"></a>Dashboard</a><br>
+      <a href="User.html" >Users</a><br>
+      <a href="UserSession.html">Login Session</a><br>
+      <a href= "Login.html"> Logout</a> <br>
+
+      <h2> Dashboard</h2>
+
+      <h3> Today's is 'abc' Birthday.</h3>
+</body>
+</html>
