@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="/js/ragistration.js"></script>
+</head>
+
+<body>
+    <h2>Registration</h2>
+
+    <form method="post" name="userForm" >
+
+        <div class="container">
+            <input type="text" placeholder="Name" name="uname" id="uname"><br><br>
+            <input type="email" placeholder="Email" name="email" id="email"><br><br>
+            <input type="password" placeholder="Password" name="psw" id="psw"><br><br>
+            <input type="password" placeholder="Conform Password" name="psw-repeat"><br><br>
+            <input list="cities" placeholder="Select City" name="city" id="city">
+            <datalist id="cities">
+                <option value="Baroda">
+                <option value="surat">
+                <option value="amreli">
+                <option value="Rajkot">
+                <option value="Mumbai">
+            </datalist><br><br>
+            <input list="states" placeholder="Select state" name="state" id="state">
+            <datalist id="states">
+                <option value="Goa">
+                <option value="Gujarat">
+                <option value="Manipur">
+                <option value="Nagaland">
+                <option value="Punjab">
+            </datalist><br><br>
+            <input type="checkbox" id="term" name="term" value="term">
+            <label for="term"> term & condition</label><br><br>
+            <a href="Login.html" >
+            <input type="button" onclick ="return validationForm()" value="Register">
+            </a>
+        </div>
+
+    </form>
+    
+</body>
+
+</html>
