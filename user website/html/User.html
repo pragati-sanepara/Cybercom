@@ -6,22 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="/js/user.js"></script>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <h2> Add User</h2>
+    <div class="sidenav">
+    <h3 id = "userName">hello</h3>
+    <a href="Dashboard.html">Dashboard</a><br>
+      <a href="User.html" >Users</a><br>
+      <a href="UserSession.html">Login Session</a><br>
+      <a href= "Login.html" onclick="logOut()"> Logout</a> <br><br><br>
+    </div>
+<div class="main">
+    <h2 id="add" class="alert alert-info text-center"> Add User</h2>
     <form id="userData">
-        <input type="text" placeholder="Name" name="uname" id="name">
-        <input type="email" placeholder="Email" name="email" id="email">
-        <input type="password" placeholder="Password" name="psw" id="psw">
-        <input type="date" placeholder="Birthdate " name="date" id="date"><br>
+        <input type="text" class="form mt-2" placeholder="Name" name="uname" id="name">
+        <input type="email" class="form mt-2" placeholder="Email" name="email" id="email">
+        <input type="password" class="form mt-2" placeholder="Password" name="psw" id="psw">
+        <input type="date" class="form mt-2" placeholder="Birthdate " name="date" id="date"><br>
 
-        <input type="button" value="Add User" onclick="store()">
+        <button onclick="store()" class="btn btn-info" id="btn">Add User</button>
+        <!-- <button id="updateBtn" style="visibility:hidden" onclick="edit(this)">Update User</button> -->
+        <input type="button" class="btn btn-info" id="updateBtn" style="visibility:hidden" onclick="updateUser()" value="Update User">
+
     </form>
     <br>
     <h2>User list </h2>
-    <table id="list1">
+    <table id="list1" class="table table-bordered">
         <thead>
             <tr>
                 <th>Name</th>
@@ -38,6 +50,8 @@
 
         </tbody>
     </table>
+</div>
+    <script type="text/javascript" src="/js/user.js"></script>
 </body>
 
 </html>

@@ -1,58 +1,71 @@
-        function validationForm() {
-            var firstName = document.forms["userForm"]["uname"];
-            var emailID = document.forms["userForm"]["email"];
-            var Password = document.forms["userForm"]["psw"];
-            var rePassword = document.forms["userForm"]["psw-repeat"];
-            var City = document.forms["userForm"]["city"];
-            var State = document.forms["userForm"]["state"];
-            var Term = document.forms["userForm"]["term"]; 
+function validationForm() {
+    var firstName = document.forms["userForm"]["uname"].value;
+    var emailID = document.forms["userForm"]["email"].value;
+    var Password = document.forms["userForm"]["psw"].value;
+    var rePassword = document.forms["userForm"]["psw-repeat"].value;
+    var City = document.forms["userForm"]["city"].value;
+    var State = document.forms["userForm"]["state"].value;
+    var Term = document.forms["userForm"]["term"].value;
 
-            if (firstName.value == "") {
-                alert("Please enter firstName....!");
-                return false;
-            }
-            if (emailID.value == "") {
-                alert("Please enter email id ....!");
-                return false;
-            }
-            if (Password.value == "") {
-                alert("Please enter Password....!");
-                return false;
-            }
-            if (rePassword.value == "") {
-                alert("Please enter rePassword....!");
-                return false;
-            }
-            if (City.value == "") {
-                alert("Please select city....!");
-                return false;
-            }
-            if (State.value == "") {
-                alert("Please select state....!");
-                return false;
-            }
-            if ((rePassword.value != "") && (Password.value != rePassword.value)) {
-                alert("Please enter same Repeat Password....!");
-                return false;
-            }
-            if(Term.checked == false){
-                alert("Please accept the term and condition....!");
-                return false;
-            }
-            storeAdmin();
-        }
+    if (firstName == "") {
+        alert("Please enter firstName....!");
+        return false;
+    }
+    if (emailID == "") {
+        alert("Please enter email id ....!");
+        return false;
+    }
+    if (Password == "") {
+        alert("Please enter Password....!");
+        return false;
+    }
+    if (rePassword == "") {
+        alert("Please enter rePassword....!");
+        return false;
+    }
+    if (City == "") {
+        alert("Please select city....!");
+        return false;
+    }
+    if (State == "") {
+        alert("Please select state....!");
+        return false;
+    }
+    if ((rePassword != "") && (Password != rePassword)) {
+        alert("Please enter same Repeat Password....!");
+        return false;
+    }
+    if (Term.checked == false) {
+        alert("Please accept the term and condition....!");
+        return false;
+    }
+    storeAdmin();
+}
 
 
-function storeAdmin(){
-    alert('hello admin');
-    var data = JSON.parse(localStorage.getItem('adminData'));
+function storeAdmin() {
+    var data = JSON.parse(localStorage.getItem('adminData')) ?? [];
     // console.log(data);
     // console.log(localStorage.getItem);
-     Name = document.getElementById('uname').value,
-     Email = document.getElementById('email').value,
-     Password = document.getElementById('psw').value,
-     City = document.getElementById('city').value,
-     State = document.getElementById('state').value
+    Name = document.getElementById('uname').value,
+        Email = document.getElementById('email').value,
+        Password = document.getElementById('psw').value,
+        City = document.getElementById('city').value,
+        State = document.getElementById('state').value
+
+    var userdata = JSON.parse(localStorage.getItem('userData')) ?? [];
+    var admindata = JSON.parse(localStorage.getItem('adminData')) ?? [];
+
+    var isUser = userdata.find((e) => e.Email == Email);
+    var isAdmin = admindata.find((e) => e.Email == Email);
+
+    if (isAdmin || isUser) {
+        alert("user or admin alredy exist..")
+        return false;
+    }
+    else{
+        window.open("./Login.html", "_self");
+    }
 
     if (!data)
         data = [];

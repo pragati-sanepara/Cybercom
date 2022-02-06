@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="sidenav">
+        <h3 id="userName">hello</h3>
+        <a href="Dashboard.html">Dashboard</a><br>
+        <a href="User.html">Users</a><br>
+        <a href="UserSession.html">Login Session</a><br>
+        <a href="Login.html" onclick="logOut()"> Logout</a> <br>
+    </div>
+    <div class="main">
+        <h2 class="container-fluid text-xl-center mt-4"> Dashboard</h2>
+        <div class="container mt-5"> 
+        <div class="row">
+        <div class="col">
+            <h3 class="col">User < 18 Years <br> <span>0</span> Users</h3>
+        </div>
+        <div class="col">
+            <h3 class="col">User 18-50 Years <br> <span id="age18+">0</span> Users</h3>
+        </div>
+        <div class="col">
+            <h3 class="col">User > 50 Years <br> <span id="age50+">0</span> Users</h3>
+        </div>
+    </div>
+    </div>
+        <h1 class="container-fluid text-xl-center mt-4" id="bday"></h1>
+    </div>
+    <script type="text/javascript" src="/js/dashboard.js"></script>
+</body>
+
+</html>
