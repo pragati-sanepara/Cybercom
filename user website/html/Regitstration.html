@@ -6,44 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="/js/ragistration.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <h2>Registration</h2>
+    <h2 class="alert alert-info text-center" >Registration</h2>
 
-    <form method="post" name="userForm" >
+    <form method="post" class="form" name="userForm" >
 
         <div class="container">
-            <input type="text" placeholder="Name" name="uname" id="uname"><br><br>
-            <input type="email" placeholder="Email" name="email" id="email"><br><br>
-            <input type="password" placeholder="Password" name="psw" id="psw"><br><br>
-            <input type="password" placeholder="Conform Password" name="psw-repeat"><br><br>
-            <input list="cities" placeholder="Select City" name="city" id="city">
-            <datalist id="cities">
+            <input type="text" class="form-control mt-1" placeholder="Name" name="uname" id="uname">
+            <input type="email" class="form-control mt-1" placeholder="Email" name="email" id="email">
+            <input type="password" class="form-control mt-1" placeholder="Password" name="psw" id="psw">            <input type="password" class="form-control mt-1" placeholder="Conform Password" name="psw-repeat">
+            <input list="cities" class="form-control mt-1" placeholder="Select City" name="city" id="city">
+            <datalist id="cities"> 
                 <option value="Baroda">
                 <option value="surat">
                 <option value="amreli">
                 <option value="Rajkot">
                 <option value="Mumbai">
-            </datalist><br><br>
-            <input list="states" placeholder="Select state" name="state" id="state">
+            </datalist>
+            <input list="states" class="form-control mt-1" placeholder="Select state" name="state" id="state">
             <datalist id="states">
                 <option value="Goa">
                 <option value="Gujarat">
                 <option value="Manipur">
                 <option value="Nagaland">
                 <option value="Punjab">
-            </datalist><br><br>
+            </datalist>
+            <div class="form-control mt-1">
             <input type="checkbox" id="term" name="term" value="term">
-            <label for="term"> term & condition</label><br><br>
-            <a href="Login.html" >
-            <input type="button" onclick ="return validationForm()" value="Register">
-            </a>
-        </div>
+            <label for="term" > term & condition</label>
+            </div>
+            <input type="button" class="btn btn-info form-control mt-2" onclick ="return validationForm()" value="Register">
+       </div>
 
     </form>
-    
+    <script type="text/javascript" src="/js/ragistration.js"></script>
 </body>
 
 </html>
