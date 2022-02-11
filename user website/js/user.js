@@ -11,13 +11,20 @@ function store() {
         return false;
     }
 
+    var atposition = data.indexOf("@");
+    var dotposition = data.lastIndexOf(".");
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+        alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+        return false;
+    }
+
     var isUser = data.find((e) => e.Email == Email);
     if (isUser) {
         alert("user alredy exist..")
         return false;
     }
     var isUserName = data.find((e) => e.Name == Name);
-    if(isUserName){
+    if (isUserName) {
         alert("This name's user is already exit. please give valid UserName..");
         return false;
     }
@@ -103,7 +110,7 @@ function edit(id) {
 }
 function updateUser() {
     var id = JSON.parse(sessionStorage.getItem('userId'));
-console.log(id);
+    console.log(id);
     var userdata1 = JSON.parse(localStorage.getItem('userData')) ?? [];
     var Name = document.getElementById('name').value;
     var Email = document.getElementById('email').value;
@@ -111,7 +118,7 @@ console.log(id);
     var date = document.getElementById('date').value;
 
     var isUserNameId = userdata1.findIndex((e) => e.Name === Name);
-    if( isUserNameId != -1 && isUserNameId != id){
+    if (isUserNameId != -1 && isUserNameId != id) {
         alert("This name's user is already exit. please give valid UserName..");
         return false;
     }
@@ -153,7 +160,7 @@ console.log(id);
 function delete2(id) {
     // const id = e.parentNode.id;
     var userdata1 = JSON.parse(localStorage.getItem('userData'));
-    alert('Are you sure to delete the userdetail of' + userdata1[id].Name);
+    confirm('Are you sure to delete the userdetail of' + userdata1[id].Name);
 
     var userName = JSON.parse(localStorage.getItem("sessionTime"));
     var findUser = userName.find((e) => e.Name == userdata1[id].Name);

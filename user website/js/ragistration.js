@@ -56,6 +56,13 @@ function storeAdmin() {
     var userdata = JSON.parse(localStorage.getItem('userData')) ?? [];
     var admindata = JSON.parse(localStorage.getItem('adminData')) ?? [];
 
+    var atposition = Email.indexOf("@");
+    var dotposition = Email.lastIndexOf(".");
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= Email.length) {
+        alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+        return false;
+    }
+
     var isUser = userdata.find((e) => e.Email == Email);
     var isAdmin = admindata.find((e) => e.Email == Email);
 
