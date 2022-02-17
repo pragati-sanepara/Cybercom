@@ -1,23 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { WarningComponent } from '../../components/warning/warning.component';
-import { SuccessComponent } from '../../components/success/success.component';
-import { DangerComponent } from '../../components/danger/danger.component';
+import { SuccessComponent } from './success/success.component';
+import { DangerComponent } from './danger/danger.component';
+import { WarningComponent } from './warning/warning.component';
 
 @NgModule({
-  declarations: [
-    SuccessComponent,
-    WarningComponent,
-    DangerComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  exports: [
-    SuccessComponent,
-    WarningComponent,
-    DangerComponent
-  ]
+  declarations: [SuccessComponent, WarningComponent, DangerComponent],
+  imports: [BrowserModule],
+  exports: [SuccessComponent, WarningComponent, DangerComponent],
 })
-
-export class TestModule { }
+export class TestModule {}
