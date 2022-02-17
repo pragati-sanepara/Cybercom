@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { SuccessComponent } from './success.component';
-import { WarningComponent } from './warning.component';
-import { DangerComponent } from './danger.component';
-import { AppComponent } from '../app.component';
+import { WarningComponent } from '../../components/warning/warning.component';
+import { SuccessComponent } from '../../components/success/success.component';
+import { DangerComponent } from '../../components/danger/danger.component';
 
 @NgModule({
   declarations: [

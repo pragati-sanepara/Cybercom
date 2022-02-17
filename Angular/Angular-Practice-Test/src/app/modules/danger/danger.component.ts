@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'test-danger',
-  templateUrl: './denger.component.html',
+  templateUrl: './danger.component.html',
   styleUrls: ['./danger.component.css']
 })
 
